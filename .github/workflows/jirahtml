@@ -1,0 +1,15 @@
+name: Jira Triggered Build and Deploy
+
+on:
+  workflow_dispatch:
+    types: [jira_form_submit]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build HTML
+        run: echo "Hello, World!" > index.html
+      - name: Deploy to a Web Server (Replace with your deployment steps)
+        run: # Your deployment script here (e.g., using a deployment tool or script)
